@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNoteActivity"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:paddingStart="15dp"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_back"
+                    android:id="@+id/back"/>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_check"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/done"/>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/noteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:hint="@string/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/colorTextHint" />
+
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteTitle"
+                android:textColor="@color/colorTextHint"
+                android:layout_marginStart="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lin1"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/datetime">
+                <View
+                    android:id="@+id/colorbar"
+                    android:layout_width="8dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAccent"
+                    android:layout_marginStart="12dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteSubTitle"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/white"
+                    android:paddingTop="10dp"
+                    android:hint="@string/sub_title"
+                    android:textColorHint="@color/colorTextHint"
+                    android:paddingBottom="10dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteImage"
+                android:visibility="gone"
+                android:layout_below="@+id/lin1"/>
+
+            <EditText
+                android:id="@+id/noteinput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteImage"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="15dp"
+                android:hint="@string/type_note_here"
+                android:minHeight="100dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/colorTextHint" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/my_color"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="45dp"
+    android:id="@+id/my_color">
+
+    <TextView
+        android:id="@+id/colortext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/colortext_background"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Color"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colortext"
+        android:orientation="horizontal"
+        android:layout_toStartOf="@+id/pickcolor"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/color_background1" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_check"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/color_background2" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/color_background3" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/color_background4" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/color_background5" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pickcolor"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/colortext"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Pick color"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/linImage"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/pickcolor">
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_image"
+            app:tint="@color/colorIcons" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Image"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</RelativeLayout>
